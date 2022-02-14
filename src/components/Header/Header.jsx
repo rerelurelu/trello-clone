@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+
+import './Header.module.css';
 
 export const Header = () => {
   return (
     <div>
       <header>
-        <h1>Hello Trello</h1>
+        <h1>Trello</h1>
       </header>
     </div>
-  )
-}
-
+  );
+};
