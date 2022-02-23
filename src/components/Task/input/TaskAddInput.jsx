@@ -1,5 +1,15 @@
 import React from 'react';
 
 export const TaskAddInput = () => {
-  return <div>TaskAddInput</div>;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input className="taskAddInput" type="text" placeholder="add a task" />
+      </form>
+    </div>
+  );
 };
