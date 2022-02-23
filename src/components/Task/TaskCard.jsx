@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { TaskCardTitle } from './TaskCardTitle';
 import { TaskCardDeleteButton } from './Button/TaskCardDeleteButton';
 import { TaskAddInput } from './Input/TaskAddInput';
 import { Tasks } from './Tasks';
-import './TaskCard.css'
+import './TaskCard.css';
 
 export const TaskCard = () => {
+  const [inputText, setInputText] = useState('');
+  const [taskList, setTaskList] = useState([]);
+
   return (
-    <div className='taskCard'>
+    <div className="taskCard">
       <TaskCardTitle />
       <TaskCardDeleteButton />
-      <TaskAddInput />
+      <TaskAddInput
+        inputText={inputText}
+        setInputText={setInputText}
+        setTaskList={setTaskList}
+        taskList={taskList}
+      />
       <Tasks />
     </div>
   );
