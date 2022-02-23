@@ -1,8 +1,8 @@
-import React from 'react';
-
 export const TaskAddInput = ({ inputText, setInputText, setTaskList, taskList }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    setTaskList([...taskList, { text: inputText }]);
+    setInputText('');
   };
 
   const handleChange = (e) => {
@@ -17,6 +17,7 @@ export const TaskAddInput = ({ inputText, setInputText, setTaskList, taskList })
           type="text"
           placeholder="add a task"
           onChange={handleChange}
+          value={inputText}
         />
       </form>
     </div>
