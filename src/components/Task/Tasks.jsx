@@ -1,11 +1,11 @@
 import { Task } from './Task';
 
-export const Tasks = ({ inputText, taskList }) => {
+export const Tasks = ({ taskList }) => {
   return (
     <div>
       {taskList.map((task) => (
         <div>
-          <Task />
+          <Task task={task} />
         </div>
       ))}
     </div>
