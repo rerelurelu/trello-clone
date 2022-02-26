@@ -1,7 +1,10 @@
 export const TaskAddInput = ({ inputText, setInputText, setTaskList, taskList }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTaskList([...taskList, { text: inputText }]);
+    if (inputText === '') {
+      return;
+    }
+    setTaskList([...taskList, { id: taskList.length, text: inputText }]);
     setInputText('');
   };
 
