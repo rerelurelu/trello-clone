@@ -4,7 +4,6 @@ import { TaskCardTitle } from './TaskCardTitle';
 import { TaskCardDeleteButton } from './Button/TaskCardDeleteButton';
 import { TaskAddInput } from './Input/TaskAddInput';
 import { Tasks } from './Tasks';
-import './TaskCard.css';
 
 export const TaskCard = () => {
   const [inputText, setInputText] = useState('');
@@ -12,8 +11,10 @@ export const TaskCard = () => {
 
   return (
     <div className="taskCard">
-      <TaskCardTitle />
-      <TaskCardDeleteButton />
+      <div className='taskCardHeader'>
+        <TaskCardTitle />
+        <TaskCardDeleteButton />
+      </div>
       <TaskAddInput
         inputText={inputText}
         setInputText={setInputText}
