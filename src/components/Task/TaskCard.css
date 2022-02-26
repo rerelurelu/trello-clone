@@ -2,7 +2,7 @@
   width: 250px;
   padding: 10px 25px;
   margin: 10px 1%;
-  background-color: rgba(228, 229, 233, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   color: #00f1f9;
   border-radius: 10px;
 }
@@ -52,4 +52,42 @@
   margin-right: 9px;
   border: none;
   cursor: pointer;
+}
+
+.taskCardsArea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.AddTaskCardButtonArea {
+  margin-left: 1%;
+  margin-top: 25px;
+}
+
+.addTaskCardButton {
+  color: rgba(204, 50, 244, 0.9);
+  padding: 10px 17px;
+  border-radius: 9999px;
+  font-size: 30px;
+  background-color: rgba(0, 241, 249, 0.9);
+  box-shadow: 1px 1px 8px 1px rgba(0, 241, 249, 0.4);
+  transition: all 0.3s;
+}
+.addTaskCardButton:hover {
+  box-shadow: none;
+  transform: translate(1px, 1px);
+}
+
+.taskCardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskCardDeleteButton {
+  color: #d62954;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
 }/*# sourceMappingURL=TaskCard.css.map */
