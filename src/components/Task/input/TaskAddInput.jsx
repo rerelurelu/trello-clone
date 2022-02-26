@@ -1,10 +1,13 @@
+import { v4 as uuid } from 'uuid';
+
 export const TaskAddInput = ({ inputText, setInputText, setTaskList, taskList }) => {
   const handleSubmit = (e) => {
+    const taskId = uuid();
     e.preventDefault();
     if (inputText === '') {
       return;
     }
-    setTaskList([...taskList, { id: taskList.length, text: inputText }]);
+    setTaskList([...taskList, { id: taskId, draggableId: `task-${taskId}`, text: inputText }]);
     setInputText('');
   };
 
